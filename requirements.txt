@@ -1,10 +1,7 @@
 numpy
 tifffile
-PyQt5
-pyqtgraph
 spam-package
-pyvista
 matplotlib
 scikit-image
 scipy
-colorcet
+numba
