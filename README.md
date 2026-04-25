@@ -33,7 +33,6 @@ labeltool/
 │   ├── segmentation.py # Segmentation refinement algorithms
 │   ├── viz_utils.py    # 3D visualization utilities
 │   └── merge_utils.py  # Label merging and boundary detection
-├── examples/           # Demonstration scripts and tutorials
 ├── tests/              # Unit tests
 └── README.md
 ```
