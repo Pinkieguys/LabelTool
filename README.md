@@ -41,10 +41,12 @@ labeltool/
 ### Dependencies
 The tool requires several scientific Python libraries, which will be installed automatically:
 - `numpy`, `scipy`, `scikit-image`
-- `PyQt5`, `pyqtgraph`
-- `pyvista`
 - `spam-package` (Software for Processing and Analysis of Materials)
-- `tifffile`
+- `tifffile`, `numba`
+
+If you want to also try out the function of src/labeltool:
+- `PyQt5`, `pyqtgraph`
+- `pyvista`, ''
 
 ---
 
