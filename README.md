@@ -35,7 +35,6 @@ labeltool/
 │   └── merge_utils.py  # Label merging and boundary detection
 ├── examples/           # Demonstration scripts and tutorials
 ├── tests/              # Unit tests
-├── pyproject.toml      # Project metadata and dependencies
 └── README.md
 ```
 
@@ -67,6 +66,12 @@ To reproduce the results presented in the paper, please replace the correspondin
 *   **Description:** This file is a replacement for `spam`'s pool processing module. The `localDetection_modiefied` function replaces `localDetection` to implement the **LLT** technique for precise contact correction and segmentation refinement.
 *   **Usage:** Locate `pool.py` in the `spam` library and replace it with `algo/modifiedlabel_pool.py`.
 
+### 3. Side-Window Filter (SWF) implementation
+*   **File:** `algo/sidewindow.py`
+*   **Function:** `applySWF3D`
+*   **Description:** Implementation of a 3D side-window filter (SWF) for edge-preserving smoothing of volumetric grayscale images. The function splits the kernel and the local neighborhood into side windows, evaluates responses for each window, and selects the response closest to the original voxel intensity. Supports optional custom division functions, multiprocessing, and Numba JIT acceleration.
+*   **Usage:** Call `applySWF3D(image, kernel, division=None, cpu_using=..., JIT=False)`. See the `__main__` example inside `algo/sidewindow.py` for a minimal usage example.
+
 > **Tip:** We recommend backing up the original `spam` files before overwriting them.
 
 ---
@@ -81,3 +86,4 @@ The `dataset/` directory contains the experimental data used to validate the alg
 *   **Lentils**:
     *   Contains tomographic scans of lentils.
     *   Includes `Raw Image` and manually corrected `Golden Standard`.
+    *   The Lentils dataset is cited from Pinzon, Gustavo; Andò, Edward; Tengattini, Alessandro; Viggiani, Gioacchino. X-ray tomography analysis of particle morphology influence on granular deformation processes. Open Geomechanics, Volume 6 (2025), article no. 2, 14 p.. doi: 10.5802/ogeo.21
