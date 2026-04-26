@@ -9,7 +9,7 @@ Users may encounter incomplete documentation or minor issues. A more polished an
 
 LabelTool is a Python-based toolkit designed for scientific researchers to refine 3D image segmentations. It provides specialized tools to detect and fix common segmentation errors like over-segmentation (particles split into multiple labels) and under-segmentation (multiple particles merged into one label), which are frequent in X-ray CT and other 3D imaging modalities.
 
-This repository also includes specific implementations of algorithms discussed in our associated paper, including **Eigenvalue Correction** for normal fitting and **LLT (Locally-adaptive Local Threshold)** technique for contact correction.
+This repository also includes specific implementations of algorithms discussed in our associated paper, including **3D Side-window Filter** for image filtering, **Eigenvalue Correction** for normal fitting and **LLT (Locally-adaptive Local Threshold)** technique for contact correction.
 
 ## Key Features
 
@@ -24,6 +24,7 @@ This repository also includes specific implementations of algorithms discussed i
 labeltool/
 ├── algo/               # <--- Improved algorithms (SPAM patches) from the paper
 │   ├── contacts.py     # Modified contact normal fitting (Eigenvalue Correction)
+│   ├── sidewindow.py     # 3D version of Side window filter
 │   └── modifiedlabel_pool.py # Modified local detection (LLT technique)
 ├── dataset/            # <--- Experimental datasets used in the paper
 │   ├── NaturalSand/    # Natural Sand samples (Raw image & Golden Standard)
